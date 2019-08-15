@@ -1,0 +1,78 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="chrome=1"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content=noodp><link rel=next href=https://sukeey.github.io/2019/lifirst/><link rel=canonical href=https://sukeey.github.io/2019/first/><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><meta name=msapplication-TileColor content=#da532c><meta name=theme-color content=#ffffff><title>使用hugo搭建个人博客站点 | sukeey</title><meta name=title content="使用hugo搭建个人博客站点 | sukeey"><link rel=stylesheet href=/font/iconfont.css><link rel=stylesheet href=/css/main.min.css><meta name=twitter:card content=summary><meta name=twitter:title content=使用hugo搭建个人博客站点><meta name=twitter:description content="使用hugo搭建个人博客站点 1. Hugo二进制下载地址戳这里,解压后会有一个叫hugo.exe或者hugo的程序。
+2. 生成自己的站点 用命令行方式
+$ hugo new site mysite  那么在mysite里面会自动生成以下的目录：
+archetypes/
+content/
+layouts/
+static/
+themes/
+config.toml
+注: congig.toml是网站的配置文件(有时你要用一个主题，可能会改动这个配置文件),content目录里放的是你写的markdown文章，layouts目录里放的是网站的模板文件，static目录里放的是一些图片、css、js等资源。
+3. 进入生成的site目录
+$ cd mysite #创建一个页面 $ hugo new about.md #若是博客日志，最好将其放在content的post下 $ hugo new post/first.md #这样会在content/post下生成一个MarkDown格式的first.md文件  4. 接下来就可以写文章,draft 表示是否是草稿，编辑完成后请将其改为 false，否则编译会跳过草稿文件。 附：MarkDown基本语法
+5. 有一点，默认生成的网站是没有任何皮肤的，但没有主题又无法工作，所以要去主题网站下载一个主题到themes中.
+$ cd themes $ git clone https://github.com/orianna-zzo/AllinOne.git themes/AllinOne $ tree # 检测主题是否下载成功，一般可以直接看出来。  (当然网好的话可以下载所有的主题)
+6. 进行本地调试
+$ hugo server --theme=AllinOne --buildDrafts --watch  解释： 在项目根目录下(mysite目录下)，通过 hugo server 命令可以使用 hugo 内置服务器调试预览博客。&ndash;theme 选项可以指定主题，&ndash;watch 选项可以在修改文件后自动刷新浏览器，&ndash;buildDrafts 包括标记为草稿(draft)的内容。"><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"使用hugo搭建个人博客站点","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/sukeey.github.io\/2019\/first\/"},"image":{"@type":"ImageObject","url":"https:\/\/sukeey.github.io\/cover.png","width":800,"height":600},"genre":"posts","wordcount":329,"url":"https:\/\/sukeey.github.io\/2019\/first\/","datePublished":"2019-04-26T16:49:21\x2b08:00","dateModified":"2019-04-26T16:49:21\x2b08:00","publisher":{"@type":"Organization","name":"sukeey","logo":{"@type":"ImageObject","url":"https:\/\/sukeey.github.io\/logo.png","width":127,"height":40}},"author":{"@type":"Person","name":"sukeey"},"description":""}</script></head><body><div class=wrapper><nav class=navbar><div class=container><div class="navbar-header header-logo"><a href=https://sukeey.github.io>sukeey</a></div><div class="menu navbar-right"><a class=menu-item href=/posts/>Blog</a>
+<a class=menu-item href=/about>About</a>
+<a href=javascript:void(0); class=theme-switch><i class="iconfont icon-sun"></i></a>&nbsp;</div></div></nav><nav class=navbar-mobile id=nav-mobile style=display:none><div class=container><div class=navbar-header><div><a href=javascript:void(0); class=theme-switch><i class="iconfont icon-sun"></i></a>&nbsp;<a href=https://sukeey.github.io>sukeey</a></div><div class=menu-toggle><span></span><span></span><span></span></div></div><div class=menu id=mobile-menu><a class=menu-item href=/posts/>Blog</a>
+<a class=menu-item href=/about>About</a></div></div></nav><main class=main><div class=container><article class=post-warp><header class=post-header><h1 class=post-title>使用hugo搭建个人博客站点</h1><div class=post-meta>Written by <a href=https://sukeey.github.io rel=author>sukeey</a> with ♥
+<span class=post-time>on <time datetime=2019-04-26>26 April 2019</time></span>
+in
+<i class="iconfont icon-timer"></i>2 min</div></header><div class=post-content><h2 id=使用hugo搭建个人博客站点>使用hugo搭建个人博客站点</h2><h3 id=1>1.</h3><p>Hugo二进制下载地址<a href=https://github.com/spf13/hugo/releases rel="nofollow noreferrer" target=_blank>戳这里</a>,解压后会有一个叫hugo.exe或者hugo的程序。</p><h3 id=2>2.</h3><p>生成自己的站点 用命令行方式</p><pre><code class=language-shell>$ hugo new site mysite
+</code></pre><p>那么在mysite里面会自动生成以下的目录：</p><p>archetypes/</p><p>content/</p><p>layouts/</p><p>static/</p><p>themes/</p><p>config.toml</p><p><code>注</code>: congig.toml是网站的配置文件(有时你要用一个主题，可能会改动这个配置文件),content目录里放的是你写的markdown文章，layouts目录里放的是网站的模板文件，static目录里放的是一些图片、css、js等资源。</p><h3 id=3>3.</h3><p>进入生成的site目录</p><pre><code class=language-shell>$ cd mysite 
+#创建一个页面
+$ hugo new about.md
+#若是博客日志，最好将其放在content的post下
+$ hugo new post/first.md
+#这样会在content/post下生成一个MarkDown格式的first.md文件
+</code></pre><h3 id=4>4.</h3><p>接下来就可以写文章,draft 表示是否是草稿，编辑完成后请将其改为 false，否则编译会跳过草稿文件。
+附：<a href=https://www.jianshu.com/p/191d1e21f7ed rel="nofollow noreferrer" target=_blank>MarkDown基本语法</a></p><h3 id=5>5.</h3><p>有一点，默认生成的网站是没有任何皮肤的，但没有主题又无法工作，所以要去<a href=https://themes.gohugo.io/ rel="nofollow noreferrer" target=_blank>主题网站</a>下载一个主题到themes中.</p><pre><code class=language-shell>$ cd themes
+$ git clone https://github.com/orianna-zzo/AllinOne.git themes/AllinOne
+$ tree    # 检测主题是否下载成功，一般可以直接看出来。
+</code></pre><p>(当然网好的话可以下载所有的主题)</p><h3 id=6>6.</h3><p>进行本地调试</p><pre><code class=language-shell>$ hugo server --theme=AllinOne --buildDrafts --watch
+</code></pre><p><code>解释</code>：
+在项目根目录下(mysite目录下)，通过 hugo server 命令可以使用 hugo 内置服务器调试预览博客。&ndash;theme 选项可以指定主题，&ndash;watch 选项可以在修改文件后自动刷新浏览器，&ndash;buildDrafts 包括标记为草稿(draft)的内容。</p><pre><code class=language-shell>E:\hugo_0.55.4\mysite&gt;
+Building sites … WARN 2019/04/29 17:25:47 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like:
+{{ with .OutputFormats.Get &quot;RSS&quot; }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/04/29 17:25:47 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+
+                   | EN
++------------------+-----+
+  Pages            |  13
+  Paginator pages  |   0
+  Non-page files   |   0
+  Static files     | 108
+  Processed images |   0
+  Aliases          |   1
+  Sitemaps         |   1
+  Cleaned          |   0
+
+Total in 216 ms
+Watching for changes in E:\hugo_0.55.4\mysite\{content,data,layouts,static,themes}
+Watching for config changes in E:\hugo_0.55.4\mysite\config.toml
+Environment: &quot;development&quot;
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Press Ctrl+C to stop
+</code></pre><p>在浏览器中打开<a href=http://localhost:1313 rel="nofollow noreferrer" target=_blank>http://localhost:1313</a><figure><img src=/images/ring.svg data-sizes=auto data-src=https://i.loli.net/2019/04/29/5cc6c45b362ef.jpg alt=pertect class=lazyload><figcaption class=image-caption>pertect</figcaption></figure></p><p>这样就可以在本地看到了。如果你想让大家都看到，就需要发布网站到github</p><h2 id=部署网站到github-page>部署网站到github page</h2><p>首先要在GitHub上创建一个Repository，命名为：sukeey.github.io （sukeey替换为你的github用户名）。
+在站点根目录(mysite)执行 Hugo 命令生成最终页面：</p><pre><code class=language-shell>$hugo
+</code></pre><p>可看到根目录(mysite)下生成/public文件夹，public的内容即Hugo生成的整个静态网站。将pubilc目录里所有文件 push 到刚创建的Repository的 master 分支。在public目录下右击打开git bush
+过程如下：</p><pre><code class=language-shell>$ git init     本地库初始化
+$ git remote add origin https://github.com/sukeey/sukeey.github.io.git      添加一个新的remote repo
+$ git add -A    一次添加所有改动的文件
+$ git commit -m &quot;first commit&quot;     将暂存区的内容提交到本地库
+$ git push -f origin master 
+</code></pre><p><figure><img src=/images/ring.svg data-sizes=auto data-src=https://i.loli.net/2019/04/29/5cc6f86367156.png alt class=lazyload><figcaption class=image-caption></figcaption></figure>浏览器里访问：<a href=http://sukeey.github.io/ rel="nofollow noreferrer" target=_blank>http://sukeey.github.io/</a> 即可</p><h2 id=过程中可能出现的问题>过程中可能出现的问题</h2><h3 id=fatal-remote-origin-already-exists>fatal: remote origin already exists.</h3><p><figure><img src=/images/ring.svg data-sizes=auto data-src=https://i.loli.net/2019/04/29/5cc6f9c1e9516.png alt=9.png class=lazyload><figcaption class=image-caption>9.png</figcaption></figure></p><p>表明这个origin库已经存在，那么删掉 git remote rm origin 库，重新执行该命令即可。</p><h3 id=git-push时报错the-requested-url-returned-error-403>git push时报错The requested URL returned error: 403</h3><p><figure><img src=/images/ring.svg data-sizes=auto data-src=https://i.loli.net/2019/04/29/5cc6fe2f9f80f.png alt=微信图片_20190429213953.png class=lazyload><figcaption class=image-caption>微信图片_20190429213953.png</figcaption></figure></p><p>在网上搜到要更改配置文件，但我改了还是没用，后看到一篇文章<a href=https://blog.csdn.net/yangfanv/article/details/80554642 rel="nofollow noreferrer" target=_blank>原文链接</a> 中的命令：</p><pre><code class=language-shell>$rundll32.exe keymgr.dll,KRShowKeyMgr
+</code></pre><p>执行这条语句后会弹出一个窗口，删掉里面的账号信息，重新git push 会弹窗让你输入用户名及密码，最后执行git push -f origin master 成功。</p><p><a href=https://i.loli.net/2019/04/29/5cc6fddc8a616.png rel="nofollow noreferrer" target=_blank><figure><img src=/images/ring.svg data-sizes=auto data-src=https://i.loli.net/2019/04/29/5cc6fddc8a616.png alt=xin.png class=lazyload><figcaption class=image-caption>xin.png</figcaption></figure></a></p><h3 id=输入-git-push-origin-master-报错>输入 git push origin master 报错</h3><pre><code class=language-shell>$ error: failed to push some refs to'https://sukeey@github.com/sukeey/sukeey.github.io.git
+</code></pre><p><a href=https://i.loli.net/2019/04/30/5cc846db46af0.png rel="nofollow noreferrer" target=_blank><figure><img src=/images/ring.svg data-sizes=auto data-src=https://i.loli.net/2019/04/30/5cc846db46af0.png alt=微信图片_20190430210128.png class=lazyload><figcaption class=image-caption>微信图片_20190430210128.png</figcaption></figure></a></p><p>原因是远程库与本地库不一致，在hint中有提示要把远程库同步到本地库，执行以下命令即可：</p><pre><code class=language-shell>$ git pull --rebase origin master
+</code></pre><p>问题详情请<a href=https://blog.csdn.net/dietime1943/article/details/85682688 rel="nofollow noreferrer" target=_blank>戳这里</a></p><h2 id=使用自己的域名>使用自己的域名</h2><p>也可以使用自己的域名，购买域名的地方很多，如网站 dnspod.cn。购买完成后，在dnsod.cn 的域名解析中添加记录。在上面存放静态网站的Repository设置里面Custom domain填上自己的域名点击save即可
+这样就可以使用 sukeey.com 来访问了。</p></div><div class=post-copyright><p class=copyright-item><span>Author:</span>
+<span>sukeey</span></p><p class=copyright-item><span>Words:</span>
+<span>329</span></p><p class=copyright-item><span>Share:</span>
+<span><a href="//twitter.com/share?url=https%3a%2f%2fsukeey.github.io%2f2019%2ffirst%2f&amp;text=%e4%bd%bf%e7%94%a8hugo%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%e7%ab%99%e7%82%b9&amp;via=" target=_blank title="Share on Twitter"><i class="iconfont icon-twitter"></i></a><a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsukeey.github.io%2f2019%2ffirst%2f" target=_blank title="Share on Facebook"><i class="iconfont icon-facebook"></i></a><a href="//www.douban.com/recommend/?url=https%3a%2f%2fsukeey.github.io%2f2019%2ffirst%2f&amp;title=%e4%bd%bf%e7%94%a8hugo%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%e7%ab%99%e7%82%b9" target=_blank title="Share on Douban"><i class="iconfont icon-douban"></i></a><a href="//service.weibo.com/share/share.php?url=https%3a%2f%2fsukeey.github.io%2f2019%2ffirst%2f&amp;appkey=&amp;title=%e4%bd%bf%e7%94%a8hugo%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%e7%ab%99%e7%82%b9" target=_blank title="Share on Douban"><i class="iconfont icon-weibo"></i></a></span></p><p class=copyright-item>Released under <a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></p></div><div class=post-tags><section><a href=javascript:window.history.back();>Back</a></span> ·
+<span><a href=https://sukeey.github.io>Home</a></span></section></div><div class=post-nav><a href=https://sukeey.github.io/2019/lifirst/ class=next rel=next title=用hugo搭建博客（补充）>用hugo搭建博客（补充）&nbsp;<i class="iconfont icon-xiaojiantou"></i></a></div><div class=post-comment></div></article></div></main><footer class=footer><div class=copyright>&copy;
+<span itemprop=copyrightYear>2019 - 2019</span>
+<span class=author itemprop=copyrightHolder><a href=https://sukeey.github.io>sukeey</a> |</span>
+<span>Crafted with ❤️ by <a href=https://github.com/Fastbyte01/KeepIt target=_blank rel="external nofollow noopener noreffer">KeepIt</a> & <a href=https://gohugo.io/ target=_blank rel="external nofollow noopener noreffer">Hugo</a></span></div></footer><link href=//lib.baomitu.com/lightgallery/1.6.12/css/lightgallery.min.css rel=stylesheet><script src=/js/vendor_gallery.min.js async></script></div></body></html>

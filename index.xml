@@ -1,0 +1,142 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>sukeey on sukeey</title><link>https://sukeey.github.io/</link><description>Recent content in sukeey on sukeey</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 07 May 2019 21:16:46 +0800</lastBuildDate><atom:link href="https://sukeey.github.io/" rel="self" type="application/rss+xml"/><item><title>用hugo搭建博客（补充）</title><link>https://sukeey.github.io/2019/lifirst/</link><pubDate>Tue, 07 May 2019 21:16:46 +0800</pubDate><guid>https://sukeey.github.io/2019/lifirst/</guid><description>
+&lt;h1 id=&#34;用hugo搭建博客-补充&#34;&gt;用hugo搭建博客（补充）&lt;/h1&gt;
+&lt;h3 id=&#34;1&#34;&gt;1.&lt;/h3&gt;
+&lt;p&gt;在git bush 给出命令：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;$ ./hugo new site sukeey #生成一个名为sukeey的网站。
+$ cd sukeey
+$ ./hugo new content/posts/li_first.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;随后编辑该md文件。&lt;/p&gt;
+&lt;h3 id=&#34;2&#34;&gt;2.&lt;/h3&gt;
+&lt;p&gt;在sukeey/themes目录下下载主题&lt;a href=&#34;https://themes.gohugo.io/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;主题网站&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;$ git clone https:github.com/Fastbyte01/KeepIt.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;等待下载完成。 在sukeey下输入：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;$ HUGO_ENV=production
+$ ./hugo --gc --minify
+$ cd public
+$ git init
+$ git add .
+$ git remote add origin https://github.com/sukeey/sukeey.github.io.git
+$ git commit -m &amp;quot;change&amp;quot;
+$ git push -f origin master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这样就可以了.&lt;/p&gt;
+&lt;h2 id=&#34;简单使用ci&#34;&gt;简单使用ci&lt;/h2&gt;
+&lt;h3 id=&#34;1-1&#34;&gt;1.&lt;/h3&gt;
+&lt;p&gt;在sukeey目录下创建一个 .circleci文件夹&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;$ mkdir .circleci
+$ ls -al
+$ vim .gitignore
+$ code .
+$ chmod +xdeply.sh
+$ ssh-keygen -m PEM -t rsa
+$ git init
+$ git remote add origin https://github.com/sukeey/sukeey.git
+$ git push origin master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;git真难😭
+要看书啊💪&lt;/p&gt;</description></item><item><title>About</title><link>https://sukeey.github.io/about/</link><pubDate>Sun, 28 Apr 2019 15:43:17 +0800</pubDate><guid>https://sukeey.github.io/about/</guid><description>&lt;p&gt;愿你强大到无需有人疼，有人宠，却依然幸运到有人疼，有人宠。&lt;/p&gt;</description></item><item><title>使用hugo搭建个人博客站点</title><link>https://sukeey.github.io/2019/first/</link><pubDate>Fri, 26 Apr 2019 16:49:21 +0800</pubDate><guid>https://sukeey.github.io/2019/first/</guid><description>
+&lt;h2 id=&#34;使用hugo搭建个人博客站点&#34;&gt;使用hugo搭建个人博客站点&lt;/h2&gt;
+&lt;h3 id=&#34;1&#34;&gt;1.&lt;/h3&gt;
+&lt;p&gt;Hugo二进制下载地址&lt;a href=&#34;https://github.com/spf13/hugo/releases&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;戳这里&lt;/a&gt;,解压后会有一个叫hugo.exe或者hugo的程序。&lt;/p&gt;
+&lt;h3 id=&#34;2&#34;&gt;2.&lt;/h3&gt;
+&lt;p&gt;生成自己的站点 用命令行方式&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;$ hugo new site mysite
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;那么在mysite里面会自动生成以下的目录：&lt;/p&gt;
+&lt;p&gt;archetypes/&lt;/p&gt;
+&lt;p&gt;content/&lt;/p&gt;
+&lt;p&gt;layouts/&lt;/p&gt;
+&lt;p&gt;static/&lt;/p&gt;
+&lt;p&gt;themes/&lt;/p&gt;
+&lt;p&gt;config.toml&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;注&lt;/code&gt;: congig.toml是网站的配置文件(有时你要用一个主题，可能会改动这个配置文件),content目录里放的是你写的markdown文章，layouts目录里放的是网站的模板文件，static目录里放的是一些图片、css、js等资源。&lt;/p&gt;
+&lt;h3 id=&#34;3&#34;&gt;3.&lt;/h3&gt;
+&lt;p&gt;进入生成的site目录&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;$ cd mysite
+#创建一个页面
+$ hugo new about.md
+#若是博客日志，最好将其放在content的post下
+$ hugo new post/first.md
+#这样会在content/post下生成一个MarkDown格式的first.md文件
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;4&#34;&gt;4.&lt;/h3&gt;
+&lt;p&gt;接下来就可以写文章,draft 表示是否是草稿，编辑完成后请将其改为 false，否则编译会跳过草稿文件。
+附：&lt;a href=&#34;https://www.jianshu.com/p/191d1e21f7ed&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;MarkDown基本语法&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;5&#34;&gt;5.&lt;/h3&gt;
+&lt;p&gt;有一点，默认生成的网站是没有任何皮肤的，但没有主题又无法工作，所以要去&lt;a href=&#34;https://themes.gohugo.io/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;主题网站&lt;/a&gt;下载一个主题到themes中.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;$ cd themes
+$ git clone https://github.com/orianna-zzo/AllinOne.git themes/AllinOne
+$ tree # 检测主题是否下载成功，一般可以直接看出来。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;(当然网好的话可以下载所有的主题)&lt;/p&gt;
+&lt;h3 id=&#34;6&#34;&gt;6.&lt;/h3&gt;
+&lt;p&gt;进行本地调试&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;$ hugo server --theme=AllinOne --buildDrafts --watch
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;解释&lt;/code&gt;：
+在项目根目录下(mysite目录下)，通过 hugo server 命令可以使用 hugo 内置服务器调试预览博客。&amp;ndash;theme 选项可以指定主题，&amp;ndash;watch 选项可以在修改文件后自动刷新浏览器，&amp;ndash;buildDrafts 包括标记为草稿(draft)的内容。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;E:\hugo_0.55.4\mysite&amp;gt;
+Building sites … WARN 2019/04/29 17:25:47 Page&#39;s .RSSLink is deprecated and will be removed in a future release. Use the Output Format&#39;s link, e.g. something like:
+{{ with .OutputFormats.Get &amp;quot;RSS&amp;quot; }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/04/29 17:25:47 Page&#39;s .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+| EN
++------------------+-----+
+Pages | 13
+Paginator pages | 0
+Non-page files | 0
+Static files | 108
+Processed images | 0
+Aliases | 1
+Sitemaps | 1
+Cleaned | 0
+Total in 216 ms
+Watching for changes in E:\hugo_0.55.4\mysite\{content,data,layouts,static,themes}
+Watching for config changes in E:\hugo_0.55.4\mysite\config.toml
+Environment: &amp;quot;development&amp;quot;
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Press Ctrl+C to stop
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在浏览器中打开&lt;a href=&#34;http://localhost:1313&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://localhost:1313&lt;/a&gt;
+&lt;img src=&#34;https://i.loli.net/2019/04/29/5cc6c45b362ef.jpg&#34; alt=&#34;pertect&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;这样就可以在本地看到了。如果你想让大家都看到，就需要发布网站到github&lt;/p&gt;
+&lt;h2 id=&#34;部署网站到github-page&#34;&gt;部署网站到github page&lt;/h2&gt;
+&lt;p&gt;首先要在GitHub上创建一个Repository，命名为：sukeey.github.io （sukeey替换为你的github用户名）。
+在站点根目录(mysite)执行 Hugo 命令生成最终页面：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;$hugo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可看到根目录(mysite)下生成/public文件夹，public的内容即Hugo生成的整个静态网站。将pubilc目录里所有文件 push 到刚创建的Repository的 master 分支。在public目录下右击打开git bush
+过程如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;$ git init 本地库初始化
+$ git remote add origin https://github.com/sukeey/sukeey.github.io.git 添加一个新的remote repo
+$ git add -A 一次添加所有改动的文件
+$ git commit -m &amp;quot;first commit&amp;quot; 将暂存区的内容提交到本地库
+$ git push -f origin master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2019/04/29/5cc6f86367156.png&#34; alt=&#34;&#34; /&gt;
+浏览器里访问：&lt;a href=&#34;http://sukeey.github.io/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://sukeey.github.io/&lt;/a&gt; 即可&lt;/p&gt;
+&lt;h2 id=&#34;过程中可能出现的问题&#34;&gt;过程中可能出现的问题&lt;/h2&gt;
+&lt;h3 id=&#34;fatal-remote-origin-already-exists&#34;&gt;fatal: remote origin already exists.&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2019/04/29/5cc6f9c1e9516.png&#34; alt=&#34;9.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;表明这个origin库已经存在，那么删掉 git remote rm origin 库，重新执行该命令即可。&lt;/p&gt;
+&lt;h3 id=&#34;git-push时报错the-requested-url-returned-error-403&#34;&gt;git push时报错The requested URL returned error: 403&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2019/04/29/5cc6fe2f9f80f.png&#34; alt=&#34;微信图片_20190429213953.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;在网上搜到要更改配置文件，但我改了还是没用，后看到一篇文章&lt;a href=&#34;https://blog.csdn.net/yangfanv/article/details/80554642&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;原文链接&lt;/a&gt; 中的命令：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;$rundll32.exe keymgr.dll,KRShowKeyMgr
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;执行这条语句后会弹出一个窗口，删掉里面的账号信息，重新git push 会弹窗让你输入用户名及密码，最后执行git push -f origin master 成功。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://i.loli.net/2019/04/29/5cc6fddc8a616.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2019/04/29/5cc6fddc8a616.png&#34; alt=&#34;xin.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;输入-git-push-origin-master-报错&#34;&gt;输入 git push origin master 报错&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;$ error: failed to push some refs to&#39;https://sukeey@github.com/sukeey/sukeey.github.io.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&#34;https://i.loli.net/2019/04/30/5cc846db46af0.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2019/04/30/5cc846db46af0.png&#34; alt=&#34;微信图片_20190430210128.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;原因是远程库与本地库不一致，在hint中有提示要把远程库同步到本地库，执行以下命令即可：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;$ git pull --rebase origin master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;问题详情请&lt;a href=&#34;https://blog.csdn.net/dietime1943/article/details/85682688&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;戳这里&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;使用自己的域名&#34;&gt;使用自己的域名&lt;/h2&gt;
+&lt;p&gt;也可以使用自己的域名，购买域名的地方很多，如网站 dnspod.cn。购买完成后，在dnsod.cn 的域名解析中添加记录。在上面存放静态网站的Repository设置里面Custom domain填上自己的域名点击save即可
+这样就可以使用 sukeey.com 来访问了。&lt;/p&gt;</description></item></channel></rss>

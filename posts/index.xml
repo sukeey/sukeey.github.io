@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on sukeey</title><link>https://sukeey.github.io/posts/</link><description>Recent content in Posts on sukeey</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 07 May 2019 21:16:46 +0800</lastBuildDate><atom:link href="https://sukeey.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>用hugo搭建博客（补充）</title><link>https://sukeey.github.io/2019/lifirst/</link><pubDate>Tue, 07 May 2019 21:16:46 +0800</pubDate><guid>https://sukeey.github.io/2019/lifirst/</guid><description>用hugo搭建博客（补充） 1. 在git bush 给出命令：
+$ ./hugo new site sukeey #生成一个名为sukeey的网站。 $ cd sukeey $ ./hugo new content/posts/li_first.md 随后编辑该md文件。
+2. 在sukeey/themes目录下下载主题主题网站
+$ git clone https:github.com/Fastbyte01/KeepIt.git 等待下载完成。 在sukeey下输入：
+$ HUGO_ENV=production $ ./hugo --gc --minify $ cd public $ git init $ git add . $ git remote add origin https://github.com/sukeey/sukeey.github.io.git $ git commit -m &amp;quot;change&amp;quot; $ git push -f origin master 这样就可以了.
+简单使用ci 1. 在sukeey目录下创建一个 .circleci文件夹
+$ mkdir .</description></item><item><title>使用hugo搭建个人博客站点</title><link>https://sukeey.github.io/2019/first/</link><pubDate>Fri, 26 Apr 2019 16:49:21 +0800</pubDate><guid>https://sukeey.github.io/2019/first/</guid><description>使用hugo搭建个人博客站点 1. Hugo二进制下载地址戳这里,解压后会有一个叫hugo.exe或者hugo的程序。
+2. 生成自己的站点 用命令行方式
+$ hugo new site mysite 那么在mysite里面会自动生成以下的目录：
+archetypes/
+content/
+layouts/
+static/
+themes/
+config.toml
+注: congig.toml是网站的配置文件(有时你要用一个主题，可能会改动这个配置文件),content目录里放的是你写的markdown文章，layouts目录里放的是网站的模板文件，static目录里放的是一些图片、css、js等资源。
+3. 进入生成的site目录
+$ cd mysite #创建一个页面 $ hugo new about.md #若是博客日志，最好将其放在content的post下 $ hugo new post/first.md #这样会在content/post下生成一个MarkDown格式的first.md文件 4. 接下来就可以写文章,draft 表示是否是草稿，编辑完成后请将其改为 false，否则编译会跳过草稿文件。 附：MarkDown基本语法
+5. 有一点，默认生成的网站是没有任何皮肤的，但没有主题又无法工作，所以要去主题网站下载一个主题到themes中.
+$ cd themes $ git clone https://github.com/orianna-zzo/AllinOne.git themes/AllinOne $ tree # 检测主题是否下载成功，一般可以直接看出来。 (当然网好的话可以下载所有的主题)
+6. 进行本地调试
+$ hugo server --theme=AllinOne --buildDrafts --watch 解释： 在项目根目录下(mysite目录下)，通过 hugo server 命令可以使用 hugo 内置服务器调试预览博客。&amp;ndash;theme 选项可以指定主题，&amp;ndash;watch 选项可以在修改文件后自动刷新浏览器，&amp;ndash;buildDrafts 包括标记为草稿(draft)的内容。</description></item></channel></rss>

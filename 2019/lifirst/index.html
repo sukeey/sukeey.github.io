@@ -1,0 +1,43 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="chrome=1"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content=noodp><link rel=prev href=https://sukeey.github.io/2019/first/><link rel=canonical href=https://sukeey.github.io/2019/lifirst/><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><meta name=msapplication-TileColor content=#da532c><meta name=theme-color content=#ffffff><title>用hugo搭建博客（补充） | sukeey</title><meta name=title content="用hugo搭建博客（补充） | sukeey"><link rel=stylesheet href=/font/iconfont.css><link rel=stylesheet href=/css/main.min.css><meta name=twitter:card content=summary><meta name=twitter:title content=用hugo搭建博客（补充）><meta name=twitter:description content='用hugo搭建博客（补充） 1. 在git bush 给出命令：
+$ ./hugo new site sukeey #生成一个名为sukeey的网站。 $ cd sukeey $ ./hugo new content/posts/li_first.md  随后编辑该md文件。
+2. 在sukeey/themes目录下下载主题主题网站
+$ git clone https:github.com/Fastbyte01/KeepIt.git  等待下载完成。 在sukeey下输入：
+$ HUGO_ENV=production $ ./hugo --gc --minify $ cd public $ git init $ git add . $ git remote add origin https://github.com/sukeey/sukeey.github.io.git $ git commit -m "change" $ git push -f origin master  这样就可以了.
+简单使用ci 1. 在sukeey目录下创建一个 .circleci文件夹
+$ mkdir .'><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"用hugo搭建博客（补充）","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/sukeey.github.io\/2019\/lifirst\/"},"image":{"@type":"ImageObject","url":"https:\/\/sukeey.github.io\/cover.png","width":800,"height":600},"genre":"posts","wordcount":102,"url":"https:\/\/sukeey.github.io\/2019\/lifirst\/","datePublished":"2019-05-07T21:16:46\x2b08:00","dateModified":"2019-05-07T21:16:46\x2b08:00","publisher":{"@type":"Organization","name":"sukeey","logo":{"@type":"ImageObject","url":"https:\/\/sukeey.github.io\/logo.png","width":127,"height":40}},"author":{"@type":"Person","name":"sukeey"},"description":""}</script></head><body><div class=wrapper><nav class=navbar><div class=container><div class="navbar-header header-logo"><a href=https://sukeey.github.io>sukeey</a></div><div class="menu navbar-right"><a class=menu-item href=/posts/>Blog</a>
+<a class=menu-item href=/about>About</a>
+<a href=javascript:void(0); class=theme-switch><i class="iconfont icon-sun"></i></a>&nbsp;</div></div></nav><nav class=navbar-mobile id=nav-mobile style=display:none><div class=container><div class=navbar-header><div><a href=javascript:void(0); class=theme-switch><i class="iconfont icon-sun"></i></a>&nbsp;<a href=https://sukeey.github.io>sukeey</a></div><div class=menu-toggle><span></span><span></span><span></span></div></div><div class=menu id=mobile-menu><a class=menu-item href=/posts/>Blog</a>
+<a class=menu-item href=/about>About</a></div></div></nav><main class=main><div class=container><article class=post-warp><header class=post-header><h1 class=post-title>用hugo搭建博客（补充）</h1><div class=post-meta>Written by <a href=https://sukeey.github.io rel=author>sukeey</a> with ♥
+<span class=post-time>on <time datetime=2019-05-07>7 May 2019</time></span>
+in
+<i class="iconfont icon-timer"></i>1 min</div></header><div class=post-content><h1 id=用hugo搭建博客-补充>用hugo搭建博客（补充）</h1><h3 id=1>1.</h3><p>在git bush 给出命令：</p><pre><code class=language-shell>$ ./hugo new site sukeey    #生成一个名为sukeey的网站。
+$ cd sukeey
+$ ./hugo new content/posts/li_first.md
+
+</code></pre><p>随后编辑该md文件。</p><h3 id=2>2.</h3><p>在sukeey/themes目录下下载主题<a href=https://themes.gohugo.io/ rel="nofollow noreferrer" target=_blank>主题网站</a></p><pre><code class=language-shell>$ git clone https:github.com/Fastbyte01/KeepIt.git
+</code></pre><p>等待下载完成。 在sukeey下输入：</p><pre><code class=language-shell>$ HUGO_ENV=production
+$ ./hugo --gc --minify
+$ cd public
+$ git init
+$ git add .
+$ git remote add origin https://github.com/sukeey/sukeey.github.io.git
+$ git commit -m &quot;change&quot;
+$ git push -f origin master
+</code></pre><p>这样就可以了.</p><h2 id=简单使用ci>简单使用ci</h2><h3 id=1-1>1.</h3><p>在sukeey目录下创建一个 .circleci文件夹</p><pre><code class=language-shell>$ mkdir .circleci
+$ ls -al
+$ vim .gitignore
+$ code .
+$ chmod +xdeply.sh
+$ ssh-keygen -m PEM -t rsa
+$ git init
+$ git remote add origin https://github.com/sukeey/sukeey.git
+$ git push origin master
+</code></pre><p>git真难😭
+要看书啊💪</p></div><div class=post-copyright><p class=copyright-item><span>Author:</span>
+<span>sukeey</span></p><p class=copyright-item><span>Words:</span>
+<span>102</span></p><p class=copyright-item><span>Share:</span>
+<span><a href="//twitter.com/share?url=https%3a%2f%2fsukeey.github.io%2f2019%2flifirst%2f&amp;text=%e7%94%a8hugo%e6%90%ad%e5%bb%ba%e5%8d%9a%e5%ae%a2%ef%bc%88%e8%a1%a5%e5%85%85%ef%bc%89&amp;via=" target=_blank title="Share on Twitter"><i class="iconfont icon-twitter"></i></a><a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsukeey.github.io%2f2019%2flifirst%2f" target=_blank title="Share on Facebook"><i class="iconfont icon-facebook"></i></a><a href="//www.douban.com/recommend/?url=https%3a%2f%2fsukeey.github.io%2f2019%2flifirst%2f&amp;title=%e7%94%a8hugo%e6%90%ad%e5%bb%ba%e5%8d%9a%e5%ae%a2%ef%bc%88%e8%a1%a5%e5%85%85%ef%bc%89" target=_blank title="Share on Douban"><i class="iconfont icon-douban"></i></a><a href="//service.weibo.com/share/share.php?url=https%3a%2f%2fsukeey.github.io%2f2019%2flifirst%2f&amp;appkey=&amp;title=%e7%94%a8hugo%e6%90%ad%e5%bb%ba%e5%8d%9a%e5%ae%a2%ef%bc%88%e8%a1%a5%e5%85%85%ef%bc%89" target=_blank title="Share on Douban"><i class="iconfont icon-weibo"></i></a></span></p><p class=copyright-item>Released under <a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></p></div><div class=post-tags><section><a href=javascript:window.history.back();>Back</a></span> ·
+<span><a href=https://sukeey.github.io>Home</a></span></section></div><div class=post-nav><a href=https://sukeey.github.io/2019/first/ class=prev rel=prev title=使用hugo搭建个人博客站点><i class="iconfont icon-dajiantou"></i>&nbsp;使用hugo搭建个人博客站点</a></div><div class=post-comment></div></article></div></main><footer class=footer><div class=copyright>&copy;
+<span itemprop=copyrightYear>2019 - 2019</span>
+<span class=author itemprop=copyrightHolder><a href=https://sukeey.github.io>sukeey</a> |</span>
+<span>Crafted with ❤️ by <a href=https://github.com/Fastbyte01/KeepIt target=_blank rel="external nofollow noopener noreffer">KeepIt</a> & <a href=https://gohugo.io/ target=_blank rel="external nofollow noopener noreffer">Hugo</a></span></div></footer><script src=/js/vendor_no_gallery.min.js async></script></div></body></html>
